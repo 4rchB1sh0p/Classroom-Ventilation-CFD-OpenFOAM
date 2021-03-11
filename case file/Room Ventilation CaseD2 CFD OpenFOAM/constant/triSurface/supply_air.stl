@@ -1,0 +1,44 @@
+solid "supply_air<stl unit=M>"
+   facet normal 0 0 -1
+      outer loop
+         vertex 9.80000019073486 0.0500000007450581 0
+         vertex 8.19999980926514 0.0500000007450581 0
+         vertex 9.80000019073486 0.389999985694885 0
+      endloop
+   endfacet
+   facet normal 0 0 -1
+      outer loop
+         vertex 9.80000019073486 0.389999985694885 0
+         vertex 8.19999980926514 0.0500000007450581 0
+         vertex 8.19999980926514 0.389999985694885 0
+      endloop
+   endfacet
+   facet normal 0 0 -1
+      outer loop
+         vertex 6.59999990463257 0.0500000007450581 0
+         vertex 5 0.0500000007450581 0
+         vertex 6.59999990463257 0.389999985694885 0
+      endloop
+   endfacet
+   facet normal 0 0 -1
+      outer loop
+         vertex 6.59999990463257 0.389999985694885 0
+         vertex 5 0.0500000007450581 0
+         vertex 5 0.389999985694885 0
+      endloop
+   endfacet
+   facet normal 0 0 -1
+      outer loop
+         vertex 3.40000009536743 0.0500000007450581 0
+         vertex 1.79999995231628 0.0500000007450581 0
+         vertex 3.40000009536743 0.389999985694885 0
+      endloop
+   endfacet
+   facet normal 0 0 -1
+      outer loop
+         vertex 3.40000009536743 0.389999985694885 0
+         vertex 1.79999995231628 0.0500000007450581 0
+         vertex 1.79999995231628 0.389999985694885 0
+      endloop
+   endfacet
+endsolid

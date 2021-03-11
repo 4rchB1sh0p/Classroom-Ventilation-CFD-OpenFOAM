@@ -1,0 +1,46 @@
+#!/bin/sh
+cd "${0%/*}" || exit                                # Run from this directory
+. ${WM_PROJECT_DIR:?}/bin/tools/RunFunctions        # Tutorial run functions
+#------------------------------------------------------------------------------
+# Source tutorial run functions
+#. $WM_PROJECT_DIR/bin/tools/RunFunctions
+./Allmesh
+#Cleaning
+rm -rf log.buoyantSimpleFoam
+rm -rf postProcessing
+rm -rf RoomVent.foam
+rm -rf snappy.foam
+rm -r processor0
+rm -r processor1
+rm -r processor2
+rm -r processor3
+rm -r log.decomposePar
+rm -r log.decompose*
+rm -r Forces.png
+rm -r log.buoyantSimpleFoam.age
+rm -r log.postProcess.flowRatePatch
+rm -r log.probes1.age
+rm -r log.probes2.age*
+rm -r residuals-batch.png
+rm -r residualsmod.dat
+rm -r residuals-plot.png
+
+#(Validation && ./Allclean)
+#MRF file 
+cp -r system/controlDict.MRF system/controlDict
+
+#RunningSolver
+runApplication buoyantSimpleFoam 
+gnuplot residuals.gnu
+gnuplot residuals_plot.gnu
+gnuplot residuals-fO_gp.gnu
+#Post-Processing
+buoyantSimpleFoam -latestTime -postProcess -func age > log.buoyantSimpleFoamAge
+postProcess -func flowRatePatch -latestTime
+#(Validation && ./Allclean $*)
+
+#DumyFileforParaview
+touch RoomVent_CaseD2.foam
+
+
+#------------------------------------------------------------------------------

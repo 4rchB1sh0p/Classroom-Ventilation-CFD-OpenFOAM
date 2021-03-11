@@ -1,0 +1,165 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2012                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      snappyHexMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+castellatedMesh true;
+snap            true;
+addLayers       true;
+
+geometry
+{
+	desk.stl {type triSurfaceMesh; name wall_1;}
+	door_1.stl {type triSurfaceMesh; name wall_2;}
+	door_2.stl {type triSurfaceMesh; name wall_3;}
+	exhaust_air.stl {type triSurfaceMesh; name outlet_1;}
+	floor.stl {type triSurfaceMesh; name wall_4;}
+	occupant_1.stl {type triSurfaceMesh; name wall_5;}
+	occupant_2.stl {type triSurfaceMesh; name wall_6;}
+	occupant_3.stl {type triSurfaceMesh; name wall_7;}
+	occupant_4.stl {type triSurfaceMesh; name wall_8;}
+	room.stl {type triSurfaceMesh; name wall_9;}
+	supply_air.stl {type triSurfaceMesh; name inlet_1;}
+	tH_in.stl {type triSurfaceMesh; name inlet_2;}
+	tH_out.stl {type triSurfaceMesh; name outlet_2;}
+	window_1.stl {type triSurfaceMesh; name wall_10;}
+	window_2.stl {type triSurfaceMesh; name wall_11;}
+	window_3.stl {type triSurfaceMesh; name wall_12;}
+	window_4.stl {type triSurfaceMesh; name wall_13;}
+	AMI_one.stl{ type triSurfaceMesh; name AMI_1;}
+	fan_1.stl{ type triSurfaceMesh; name fan_1;}
+	refinementBox {type searchableBox; min (1.0 -0.1 0.0); max (9.0 0.6 3.0);}
+};
+
+castellatedMeshControls
+{
+    maxLocalCells 100000;
+    maxGlobalCells 5000000;
+    minRefinementCells 0;
+    maxLoadUnbalance 0.10;
+    nCellsBetweenLevels 2;
+
+    features
+    (	
+	{file "desk.eMesh"; level 1;}
+	{file "door_1.eMesh"; level 1;}
+	{file "door_2.eMesh"; level 1;}
+	{file "exhaust_air.eMesh"; level 1;}
+	{file "floor.eMesh"; level 1;}
+	{file "occupant_1.eMesh"; level 1;}
+	{file "occupant_2.eMesh"; level 1;}	
+	{file "occupant_3.eMesh"; level 1;}
+	{file "occupant_4.eMesh"; level 1;}
+	{file "room.eMesh"; level 1;}
+	{file "supply_air.eMesh"; level 1;}
+	{file "tH_in.eMesh"; level 1;}
+	{file "tH_out.eMesh"; level 1;}
+	{file "window_1.eMesh"; level 1;}
+	{file "window_2.eMesh"; level 1;}
+	{file "window_3.eMesh"; level 1;}
+	{file "window_4.eMesh"; level 1;}
+        { file "AMI_one.eMesh"; level 2;} 
+        { file "fan_1.eMesh"; level 2;} 	
+    );
+
+    refinementSurfaces
+     {
+	"wall.*" {level (1 1);}
+        "inlet.*" {level (2 3);}
+	"outlet.*" {level (2 3);}
+	fan_1 { level (3 3);} 
+	AMI_1
+		{
+			level (3 3);
+			cellZone rotating;
+			faceZone rotating;
+			cellZoneInside inside;
+			insidePoint (2.5 3.06 3.52);
+		}
+    } 
+
+    resolveFeatureAngle 30;
+
+    refinementRegions
+    {
+        //volume {mode distance; levels ((0.0006 4) (0.002 3) (0.01 2));}
+	// Note: for better mesh quality utilize this refinement region
+        // AMI{ mode inside; levels ((1E15 3));}
+    }
+
+    locationInMesh (3.5 3.3 2.9);
+    allowFreeStandingZoneFaces false;
+}
+
+snapControls
+{
+    nSmoothPatch 3;
+    tolerance 4.0;
+    nSolveIter 300;
+    nRelaxIter 5;
+    nFeatureSnapIter 10;
+    implicitFeatureSnap false;
+    explicitFeatureSnap true;
+    multiRegionFeatureSnap true;
+}
+
+addLayersControls
+{
+    relativeSizes true;
+
+    layers
+    {
+    }
+
+    expansionRatio 1.0;
+    finalLayerThickness 0.3;
+    minThickness 0.1;
+    nGrow 0;
+    featureAngle 30;
+    nRelaxIter 3;
+    nSmoothSurfaceNormals 1;
+    nSmoothNormals 3;
+    nSmoothThickness 10;
+    maxFaceThicknessRatio 0.5;
+    maxThicknessToMedialRatio 0.3;
+    minMedialAxisAngle 90;
+    nBufferCellsNoExtrude 0;
+    nLayerIter 50;
+}
+
+meshQualityControls
+{
+    maxNonOrtho 65;
+    maxBoundarySkewness 20;
+    maxInternalSkewness 4;
+    maxConcave 80;
+    minVol 1e-13;
+    minTetQuality -1;
+    minArea -1;
+    minTwist 0.01;
+    minDeterminant 0.001;
+    minFaceWeight 0.05;
+    minVolRatio 0.01;
+    minTriangleTwist -1;
+    nSmoothScale 4;
+    errorReduction 0.75;
+    relaxed
+    {
+        maxNonOrtho 75;
+    }
+}
+
+mergeTolerance 1e-6;
+
+// ************************************************************************* //

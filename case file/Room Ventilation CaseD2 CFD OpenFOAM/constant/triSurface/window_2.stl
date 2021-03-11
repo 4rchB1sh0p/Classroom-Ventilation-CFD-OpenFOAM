@@ -1,0 +1,16 @@
+solid "window_2<stl unit=M>"
+   facet normal 0 -1 0
+      outer loop
+         vertex 4 -0.699999988079071 0.800000011920929
+         vertex 4 -0.699999988079071 2.20000004768372
+         vertex 2.20000004768372 -0.699999988079071 0.800000011920929
+      endloop
+   endfacet
+   facet normal 0 -1 0
+      outer loop
+         vertex 2.20000004768372 -0.699999988079071 0.800000011920929
+         vertex 4 -0.699999988079071 2.20000004768372
+         vertex 2.20000004768372 -0.699999988079071 2.20000004768372
+      endloop
+   endfacet
+endsolid

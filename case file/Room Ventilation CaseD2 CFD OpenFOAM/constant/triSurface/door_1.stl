@@ -1,0 +1,16 @@
+solid "door_1<stl unit=M>"
+   facet normal 0 1 0
+      outer loop
+         vertex 0.200000002980232 6.30000019073486 0
+         vertex 0.200000002980232 6.30000019073486 2
+         vertex 1.39999997615814 6.30000019073486 0
+      endloop
+   endfacet
+   facet normal 0 1 0
+      outer loop
+         vertex 1.39999997615814 6.30000019073486 0
+         vertex 0.200000002980232 6.30000019073486 2
+         vertex 1.39999997615814 6.30000019073486 2
+      endloop
+   endfacet
+endsolid

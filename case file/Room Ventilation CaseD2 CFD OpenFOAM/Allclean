@@ -1,0 +1,53 @@
+#!/bin/sh
+cd "${0%/*}" || exit                                # Run from this directory
+. ${WM_PROJECT_DIR:?}/bin/tools/CleanFunctions      # Tutorial clean functions
+#------------------------------------------------------------------------------
+
+cleanCase
+
+# Remove surface and features
+rm -f constant/triSurface/motorBike.obj.gz
+rm -f constant/triSurface/motorBike.eMesh
+rm -rf constant/extendedFeatureEdgeMesh
+rm -f constant/triSurface/door_1.eMesh 
+rm -f constant/triSurface/door_2.eMesh 
+rm -f constant/triSurface/exhaust_air.eMesh 
+rm -f constant/triSurface/floor.eMesh 
+rm -f constant/triSurface/occupant_1.eMesh 
+rm -f constant/triSurface/occupant_2.eMesh 
+rm -f constant/triSurface/room.eMesh 
+rm -f constant/triSurface/supply_air.eMesh 
+rm -f constant/triSurface/template_desk.eMesh 
+rm -f constant/triSurface/template_person.eMesh 
+rm -f constant/triSurface/tH_in.eMesh 
+rm -f constant/triSurface/tH_out.eMesh 
+rm -f constant/triSurface/window_1.eMesh 
+rm -f constant/triSurface/window_2.eMesh 
+rm -f constant/triSurface/window_3.eMesh 
+rm -f constant/triSurface/window_4.eMesh 
+rm -f constant/triSurface/occupant_4.eMesh
+rm -f constant/triSurface/occupant_3.eMesh
+rm -f constant/triSurface/AMI_one.eMesh
+rm -f constant/triSurface/fan_1.eMesh
+rm -f constant/triSurface/desk.eMesh
+rm -rf log.buoyantSimpleFoam
+rm -rf postProcessing
+rm -rf RoomVent.foam
+rm -rf snappy.foam
+rm -r processor0
+rm -r processor1
+rm -r processor2
+rm -r processor3
+rm -r log.decomposePar
+rm -r log.decompose*
+rm -r Forces.png
+rm -r log.buoyantSimpleFoam.age
+rm -r log.postProcess.flowRatePatch
+rm -r log.probes1.age
+rm -r log.probes2.age*
+rm -r residuals-batch.png
+rm -r residuals-plot.png
+rm -r residuals_plot.png
+rm -r residualsmod.dat
+
+#------------------------------------------------------------------------------

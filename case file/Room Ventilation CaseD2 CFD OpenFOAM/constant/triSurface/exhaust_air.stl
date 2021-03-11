@@ -1,0 +1,16 @@
+solid "exhaust_air<stl unit=M>"
+   facet normal 0 1 0
+      outer loop
+         vertex 1.5 6.30000019073486 2.20000004768372
+         vertex 1.5 6.30000019073486 2.24000000953674
+         vertex 8 6.30000019073486 2.20000004768372
+      endloop
+   endfacet
+   facet normal 0 1 0
+      outer loop
+         vertex 8 6.30000019073486 2.20000004768372
+         vertex 1.5 6.30000019073486 2.24000000953674
+         vertex 8 6.30000019073486 2.24000000953674
+      endloop
+   endfacet
+endsolid

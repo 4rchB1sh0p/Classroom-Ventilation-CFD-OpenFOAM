@@ -1,0 +1,44 @@
+solid "tH_in<stl unit=M>"
+   facet normal 0 0 -1
+      outer loop
+         vertex 8.19999980926514 0.0500000007450581 0
+         vertex 6.59999990463257 0.0500000007450581 0
+         vertex 8.19999980926514 0.219999998807907 0
+      endloop
+   endfacet
+   facet normal 0 0 -1
+      outer loop
+         vertex 8.19999980926514 0.219999998807907 0
+         vertex 6.59999990463257 0.0500000007450581 0
+         vertex 6.59999990463257 0.219999998807907 0
+      endloop
+   endfacet
+   facet normal 0 0 -1
+      outer loop
+         vertex 5 0.0500000007450581 0
+         vertex 3.40000009536743 0.0500000007450581 0
+         vertex 5 0.219999998807907 0
+      endloop
+   endfacet
+   facet normal 0 0 -1
+      outer loop
+         vertex 5 0.219999998807907 0
+         vertex 3.40000009536743 0.0500000007450581 0
+         vertex 3.40000009536743 0.219999998807907 0
+      endloop
+   endfacet
+   facet normal 0 0 -1
+      outer loop
+         vertex 1.79999995231628 0.0500000007450581 0
+         vertex 0.200000002980232 0.0500000007450581 0
+         vertex 1.79999995231628 0.219999998807907 0
+      endloop
+   endfacet
+   facet normal 0 0 -1
+      outer loop
+         vertex 1.79999995231628 0.219999998807907 0
+         vertex 0.200000002980232 0.0500000007450581 0
+         vertex 0.200000002980232 0.219999998807907 0
+      endloop
+   endfacet
+endsolid
