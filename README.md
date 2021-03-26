@@ -9,8 +9,8 @@ schools and classrooms was poor, causing respiratory health effects. Especially 
 - **images** - Geometry and results
 - **report** - Final report of the case study
 
-## The self balancing two wheeled robot
-![](https://github.com/4rchB1sh0p/Two-Wheeled-Robot/blob/main/images/robot_1.JPG)
+## The Geometry of the classroom
+![](https://github.com/4rchB1sh0p/Classroom-Ventilation-CFD-OpenFOAM/blob/main/images/D2_Age_room.PNG)
 
 ## Hardware
 ![](https://github.com/4rchB1sh0p/Two-Wheeled-Robot/blob/main/images/hardware.JPG)
