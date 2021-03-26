@@ -10,15 +10,12 @@ schools and classrooms was poor, causing respiratory health effects. Especially 
 - **report** - Final report of the case study
 
 ## The Geometry of the classroom
-![](https://github.com/4rchB1sh0p/Classroom-Ventilation-CFD-OpenFOAM/blob/main/images/D2_Age_room.PNG)
+![](https://github.com/4rchB1sh0p/Classroom-Ventilation-CFD-OpenFOAM/blob/main/images/d2%20geom_2.PNG)
 
-## Hardware
+## Residual Plot
+![](https://github.com/4rchB1sh0p/Two-Wheeled-Robot/blob/main/images/hardware.JPG)
+
+## Results streamlines and age of air in the classroom
 ![](https://github.com/4rchB1sh0p/Two-Wheeled-Robot/blob/main/images/hardware.JPG)
 
 ![](https://github.com/4rchB1sh0p/Two-Wheeled-Robot/blob/main/images/hardware_2.JPG)
-
-
-## Mainboard
-![](https://github.com/4rchB1sh0p/Two-Wheeled-Robot/blob/main/images/mainBoard.JPG)
-
-
