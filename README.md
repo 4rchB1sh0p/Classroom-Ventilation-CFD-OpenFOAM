@@ -18,4 +18,4 @@ schools and classrooms was poor, causing respiratory health effects. Especially 
 ## Results streamlines and age of air in the classroom
 ![](https://github.com/4rchB1sh0p/Classroom-Ventilation-CFD-OpenFOAM/blob/main/images/D2_streamlines_final_v2.PNG)
 
-![](https://github.com/4rchB1sh0p/Two-Wheeled-Robot/blob/main/images/hardware_2.JPG)
+![](https://github.com/4rchB1sh0p/Classroom-Ventilation-CFD-OpenFOAM/blob/main/images/D2_Age_room.PNG)
